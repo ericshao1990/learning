@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '5.0.2'
+gem 'rails', '5.0.4'
 # Use SCSS for stylesheets
 gem 'sass'
 gem 'sass-rails'
@@ -46,12 +46,14 @@ end
 
 
 group :test do
-  gem 'minitest-reporters'
-  gem 'mini_backtrace'
-  gem 'guard-minitest'
+  gem 'rails-controller-testing', '0.1.1'
+  gem 'minitest-reporters',       '1.1.9'
+  gem 'guard',                    '2.13.0'
+  gem 'guard-minitest',           '2.4.4'
+  gem 'minitest', '~> 5.10', '!= 5.10.2' # add this here to fix error
 end
 
 group :production do
   gem 'pg'
-  gem 'rails_12factor'
+  gem 'rails_12factor', '0.0.2'
 end
